@@ -21,7 +21,7 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-export default function AnimateText({ children, dictionary, fontSize, fontUnit }) {
+export default function AnimateText({ children, dictionary }) {
   const [selectedIndex, setIndexCallback] = useState(0);
   const strings = [children, ...dictionary];
   useInterval(
@@ -32,10 +32,10 @@ export default function AnimateText({ children, dictionary, fontSize, fontUnit }
       {
         strings.map((string, i) => {
           return (<span className={`${styles.item} ${i === selectedIndex ? styles.active : ''}`}>
-            {string}  
+            {string}
           </span>);
         })}
-      {strings.sort((a,b) => b.length - a .length)[0]}
+      {strings.sort((a, b) => b.length - a.length)[0]}
     </span>
   )
 }

@@ -9,7 +9,7 @@
   text-align: center;
   visibility: visible !important;
   opacity: 1;
-  animation: fadeOut 4s linear;
+  animation: fadeOut 2s linear;
 }
 
 .active::before {
