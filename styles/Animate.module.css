@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  height: 100%;
+  visibility: hidden;
+}
+
+.active {
+  width: 100%;
+  text-align: center;
+  visibility: visible !important;
+  opacity: 1;
+  animation: fadeOut 4s linear;
+}
+
+.active::before {
+  position: absolute;
+  display: block;
+  border-bottom: red solid 5px;
+  width: 100%;
+  content: "";
+  animation: line-grow 2s ease-out;
+  top: calc(50% + 5px);
+}
+
+.item {
+  position: absolute;
+  left: 0;
+}
+
+@keyframes line-grow {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
