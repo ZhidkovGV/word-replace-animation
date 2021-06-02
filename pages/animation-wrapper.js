@@ -31,7 +31,7 @@ export default function AnimateText({ children, dictionary }) {
     <span className={styles.container}>
       {
         strings.map((string, i) => {
-          return (<span className={`${styles.item} ${i === selectedIndex ? styles.active : ''}`}>
+          return (<span key={i} className={`${styles.item} ${i === selectedIndex ? styles.active : ''}`}>
             {string}
           </span>);
         })}
