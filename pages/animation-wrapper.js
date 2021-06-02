@@ -21,7 +21,7 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-export default function AnimateText({ children, dictionary }) {
+export default function AnimateText({ children, dictionary = [] }) {
   const [selectedIndex, setIndexCallback] = useState(0);
   const strings = [children, ...dictionary];
   useInterval(
